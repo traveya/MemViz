@@ -1,0 +1,66 @@
+{
+  "name": "memviz",
+  "displayName": "memviz",
+  "description": "Memory Visualization Tool",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.138.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+
+    "commands": [
+      {
+        "command": "memviz.visualizeCurrentFile",
+        "title": "MemViz: Visualize Current Python File"
+      }
+    ],
+
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "memviz-panel",
+          "title": "MemViz",
+          "icon": "media/memviz.svg"
+        }
+      ]
+    },
+
+    "views": {
+      "memviz-panel": [
+        {
+          "type": "webview",
+          "id": "memviz.webview",
+          "name": "MemViz",
+          "icon": "media/memviz.svg"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.138.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
