@@ -1,71 +1,30 @@
-# memviz README
+# MemViz README
 
-This is the README for your extension "memviz". After writing up a brief description, we recommend including the following sections.
+Prototype memory visualization VSCode extension tool using PythonTutor API by Professor Philip Guo of University of California, San Diego. 
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Features
 
-For example if there is an image subfolder under your extension project workspace:
+Python and C Support: Visualize program execution for both Python (.py) and C (.c) files.
 
-\!\[feature X\]\(images/feature-x.png\)
+Automatic Updates: MemViz automatically refreshes its visualization after changes to the active file or changing which file is active.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Integrated Sidebar: The visualization appears directly inside VS Code.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Node.js and npm are required to run this VSCode extension
+Download Node.js and run npm install
 
-## Extension Settings
+## Instructions
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Clone the MemViz repository and open the project folder in VS Code. (make sure to open the root folder containing package.json and src/extension.ts)
+Compile the TypeScript source code: npm run compile
+Navigate to Run > Start Debugging. This launches a new VS Code window called the Extension Development Host.
+Locate the MemViz icon in the terminal activity bar and open it.
+Create or open a new Python or C file and the MemViz panel should update with your code.
+Refer to instructions at https://pythontutor.com/visualize.html#mode=edit for how to step through code and view memory visualizations.
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## Reference and Acknowledgement
+Guo, Philip J. "Online Python Tutor: Embeddable Web-Based Program Visualization for CS Education." Proceedings of the 44th ACM Technical Symposium on Computer Science Education, ACM, 2013, pp. 579–584. https://doi.org/10.1145/2445196.2445368.
